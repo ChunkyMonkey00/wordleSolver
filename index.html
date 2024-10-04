@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wordle Filter</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Wordle List Filter</h1>
+    <br>
+    <div class="break"></div>
+    <br>
+	<ul>
+		<li>Input yellow letters into the "Include Letters" section.</li>
+		<li>Put gray letters in the "Exclude Letters" section.</li>
+		<li>Put green letters and their position (0-4, instead of 1-5) in the "Filter by Position" section.</li>
+		<li>Put yellow letters and their position (0-4) in the "Filter Not at Position" section.</li>
+		<li>Both "Filter by Position" sections auto-clear. Enter 1 letter at a time.</li>
+		<li>Repeating a letter has no effect, so do not worry about that.</li>
+		<li>Reset the list if you mess up or if you are done.</li>
+	</ul>
+  <br>
+		<div class="input-section">
+			<div>
+				<label for="includeLetters">Include Letters:</label>
+				<input type="text" id="includeLetters" placeholder="Enter letters (e.g., red)">
+      </div>
+
+				<div>
+					<label for="excludeLetters">Exclude Letters:</label>
+					<input type="text" id="excludeLetters" placeholder="Enter letters (e.g., aiuoz)">
+      </div>
+
+					<div>
+						<label for="letterPosition">Filter by Position:</label>
+						<input type="text" id="positionLetter" placeholder="Letter">
+						<input type="number" id="letterIndex" placeholder="Position (0-based index)">
+      </div>
+
+						<div>
+							<label for="notPositionLetter">Filter Not at Position:</label>
+							<input type="text" id="notPositionLetter" placeholder="Letter">
+							<input type="number" id="notPositionIndex" placeholder="Position (0-based index)">
+      </div>
+
+							<button id="applyFilters">Apply Filters</button>
+              <div class="spacer"></div>
+							<button id="resetFilters">Reset List</button>
+						</div>
+
+						<div class="output-section">
+							<h2>Filtered List:</h2>
+							<div id="wordList"></div>
+						</div>
+					</div>
+
+					<script src="app.js"></script>
+</body>
+
+</html>
